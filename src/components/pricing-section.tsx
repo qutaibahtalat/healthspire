@@ -1,57 +1,52 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Check, Star, Zap } from 'lucide-react';
 import { Button } from './ui/button';
 
 const pricingPlans = [
   {
-    name: "Clinic",
-    price: 199,
-    period: "month",
-    description: "Perfect for small clinics and practices",
+    name: "Pharmacy",
+    price: 40000,
+    period: "one-time",
+    description: "For independent and chain pharmacies in Pakistan",
     features: [
-      "Up to 10 healthcare providers",
-      "Basic EMR system",
-      "Appointment scheduling",
-      "Patient portal",
-      "Email support",
-      "HIPAA compliance"
+      "Inventory & batch tracking",
+      "Expiry & reorder alerts",
+      "POS & invoicing",
+      "Drug interaction warnings",
+      "Multi-branch ready",
+      "Add‑on: Advanced PKR 60,000 | PKR 100/outlet"
     ],
     popular: false,
     gradient: "from-muted to-muted/50"
   },
   {
     name: "Hospital",
-    price: 799,
-    period: "month",
-    description: "Comprehensive solution for hospitals",
+    price: 50000,
+    period: "one-time",
+    description: "Starter package for hospitals (Pakistan)",
     features: [
-      "Unlimited healthcare providers",
-      "Full EMR & EHR system",
-      "Pharmacy management",
-      "Laboratory integration",
-      "Real-time analytics",
-      "24/7 priority support",
-      "Custom integrations",
-      "Bed management system"
+      "EMR/EHR core modules",
+      "OPD & IPD management",
+      "Pharmacy & Lab integrations",
+      "Real-time dashboards",
+      "Localized reports",
+      "Add‑on: Advanced PKR 150,000 | PKR 450/outlet"
     ],
     popular: true,
     gradient: "from-primary to-primary/80"
   },
   {
-    name: "Healthcare Network",
-    price: 1999,
-    period: "month",
-    description: "For large healthcare organizations",
+    name: "Lab",
+    price: 50000,
+    period: "one-time",
+    description: "For diagnostics and pathology labs in Pakistan",
     features: [
-      "Multi-facility management",
-      "Advanced analytics suite",
-      "AI-powered insights",
-      "Custom workflow automation",
-      "Dedicated account manager",
-      "SLA guarantee",
-      "White-label options",
-      "Advanced reporting",
-      "Regulatory compliance tools"
+      "Sample tracking",
+      "Automated result reporting",
+      "Barcode & device integration",
+      "Patient portal access",
+      "Turnaround‑time analytics"
     ],
     popular: false,
     gradient: "from-accent to-accent/60"
@@ -69,9 +64,9 @@ export function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl mb-4 font-semibold">Choose Your Plan</h2>
+          <h2 className="text-4xl mb-4 font-semibold">One‑time Pricing (PKR)</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Scalable healthcare software solutions tailored to your facility's needs
+            Transparent one‑time packages for Hospitals, Pharmacies, and Labs in Pakistan
           </p>
         </motion.div>
 
@@ -133,8 +128,8 @@ export function PricingSection() {
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >
-                      <span className="text-5xl">${plan.price}</span>
-                      <span className="text-muted-foreground">/{plan.period}</span>
+                      <span className="text-4xl font-semibold">PKR {plan.price.toLocaleString()}</span>
+                      <span className="ml-2 text-muted-foreground">({plan.period})</span>
                     </motion.div>
                   </div>
 
@@ -168,7 +163,7 @@ export function PricingSection() {
                       }`}
                     >
                       {plan.popular && <Zap className="w-4 h-4 mr-2" />}
-                      Get Started
+                      Request Quote
                     </Button>
                   </motion.div>
                 </div>

@@ -1,54 +1,55 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Dr. Sarah Chen",
-    title: "Chief Medical Officer",
-    organization: "Metro General Hospital",
-    content: "SPIREHEALTH has revolutionized our patient care workflow. The integrated EMR system has reduced documentation time by 40% and improved our care quality metrics significantly.",
+    name: "Dr. Ayesha Khan",
+    title: "Medical Superintendent",
+    organization: "Lahore City Hospital, Pakistan",
+    content: "Healthspire digitized our OPD/IPD workflows within weeks. Discharge times are faster and our teams finally have real‑time visibility into beds and pharmacy stock.",
     rating: 5,
-    avatar: "SC"
+    avatar: "AK"
   },
   {
-    name: "Michael Rodriguez",
-    title: "Pharmacy Director", 
-    organization: "HealthFirst Pharmacy Chain",
-    content: "The pharmacy management system is incredible. Real-time inventory tracking and automated drug interaction alerts have prevented countless medication errors.",
+    name: "Bilal Ahmed",
+    title: "Director of Pharmacy",
+    organization: "SehatPlus Pharmacy, Islamabad",
+    content: "Batch tracking and expiry alerts helped us cut wastage significantly. POS with drug‑interaction checks has reduced dispensing errors across branches.",
     rating: 5,
-    avatar: "MR"
+    avatar: "BA"
   },
   {
-    name: "Dr. Emily Watson",
-    title: "Laboratory Director",
-    organization: "Advanced Diagnostics Lab",
-    content: "Sample tracking and automated result reporting have streamlined our operations. We've reduced turnaround time from 4 hours to under 30 minutes for critical tests.",
+    name: "Dr. Sana Raza",
+    title: "Lab Director",
+    organization: "Karachi Diagnostics Lab",
+    content: "From barcode sample tracking to automated reporting, Healthspire brought our TAT for critical tests under 30 minutes and improved patient communication.",
     rating: 5,
-    avatar: "EW"
+    avatar: "SR"
   },
   {
-    name: "James Thompson",
-    title: "CTO",
-    organization: "Regional Medical Center",
-    content: "The security and compliance features are outstanding. HIPAA compliance is built-in, and the multi-layer security gives us complete peace of mind.",
+    name: "Engr. Hamza Iqbal",
+    title: "Head of IT",
+    organization: "Shifa Care Network, Pakistan",
+    content: "The integrations with HIS/LIS and our billing system were seamless. Centralized dashboards give leadership a reliable picture of operations every day.",
     rating: 5,
-    avatar: "JT"
+    avatar: "HI"
   },
   {
-    name: "Dr. Lisa Park",
+    name: "Dr. Farahiddiqui",
     title: "Practice Manager",
-    organization: "Family Care Clinic",
-    content: "Patient satisfaction has increased dramatically since implementing the patient portal. Appointment scheduling is now seamless and our no-show rate has dropped by 60%.",
+    organization: "Karachi Family Clinic",
+    content: "Online appointments and the patient portal improved satisfaction and cut no‑shows. Training and onboarding were quick and localized for our staff.",
     rating: 5,
-    avatar: "LP"
+    avatar: "FS"
   },
   {
-    name: "Robert Kim",
+    name: "Usman Tariq",
     title: "IT Director",
-    organization: "University Medical Center",
-    content: "Integration with our existing systems was flawless. The API connectivity and data migration tools made the transition smooth with zero downtime.",
+    organization: "Punjab Medical University Hospital",
+    content: "Healthspire’s security controls and audit trails fit our compliance needs. Deployment was smooth with zero downtime across departments.",
     rating: 5,
-    avatar: "RK"
+    avatar: "UT"
   }
 ];
 
@@ -63,9 +64,9 @@ export function TestimonialsSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl mb-4 font-semibold">Trusted by Healthcare Leaders</h2>
+          <h2 className="text-4xl mb-4 font-semibold">Trusted by Healthcare Leaders in Pakistan</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See what healthcare professionals are saying about SPIREHEALTH
+            Hear from hospitals, pharmacies, and labs using Healthspire locally
           </p>
         </motion.div>
 
